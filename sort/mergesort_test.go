@@ -11,7 +11,7 @@ func TestMergeSort(t *testing.T) {
 	expected := getDataSlice([]testType{7, 8, 44, 66})
 	buffer := make([]Data, len(initial))
 	sorted := MergeSort(initial, buffer, 0, len(initial)-1)
-	assert.Equal(t, expected, sorted, "Sorted result do not match an expected one")
+	assert.Equal(t, expected, sorted, "Sorted result does not match an expected one")
 }
 
 func TestParallelMergeSort(t *testing.T) {
@@ -19,5 +19,5 @@ func TestParallelMergeSort(t *testing.T) {
 	expected := getDataSlice([]testType{7, 8, 44, 66})
 	buffer := make([]Data, len(initial))
 	sorted := ParallelMergeSort(initial, buffer, 0, len(initial)-1)
-	assert.Equal(t, expected, sorted, "Sorted result do not match an expected one")
+	assert.Equal(t, expected, sorted, "Sorted result does not match an expected one")
 }

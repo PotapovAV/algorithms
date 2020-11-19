@@ -26,10 +26,18 @@ func (s testType) EqualsTo(other interface{}) bool {
 	return false
 }
 
-func getDataSlice(inputData []testType) []Data {
-	container := make([]Data, len(inputData))
-	for idx, value := range inputData {
-		container[idx] = testType(value)
+func getDataSlice(input []testType) []Data {
+	container := make([]Data, len(input))
+	for idx, value := range input {
+		container[idx] = value
+	}
+	return container
+}
+
+func getQSDataSlice(input []testType) []QSData {
+	container := make([]QSData, len(input))
+	for idx, value := range input {
+		container[idx] = value
 	}
 	return container
 }

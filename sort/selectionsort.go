@@ -1,16 +1,16 @@
 package sort
 
-func SelectionSort(data []Data) []Data {
-	for i := 0; i < len(data); i++ {
+func SelectionSort(input []Data) []Data {
+	for i := 0; i < len(input); i++ {
 		minIdx := i
-		for j := i + 1; j < len(data); j++ {
-			if data[j].LessThan(data[minIdx]) {
+		for j := i + 1; j < len(input); j++ {
+			if input[j].LessThan(input[minIdx]) {
 				minIdx = j
 			}
 		}
 		if minIdx != i {
-			data[i], data[minIdx] = data[minIdx], data[i]
+			input[i], input[minIdx] = input[minIdx], input[i]
 		}
 	}
-	return data
+	return input
 }
